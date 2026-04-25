@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* 自定義樣式 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Noto Sans TC', 'Inter', sans-serif;
+    background-color: #1a1a1a;
+    color: #e5e5e5;
+    padding-bottom: 70px;
+}
+.skill-level-btn {
+    padding: 0.25rem;
+    width: 2rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    cursor: pointer;
+    background-color: #374151;
+    color: #d1d5db;
+}
+.skill-level-btn:hover {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+.skill-level-btn.active {
+    background-color: #dc2626;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
+}
+.weapon-btn {
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 200ms;
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+    border-width: 2px;
+}
+@media (min-width: 640px) {
+    .weapon-btn {
+        height: 5rem;
+    }
+}
+.sub-opt-btn {
+    background-color: #374151;
+    color: #d1d5db;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    border-color: transparent;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    font-weight: 500;
+}
+.sub-opt-btn:hover {
+    background-color: #4b5563;
+}
+.sub-opt-btn.active {
+    background-color: #0d9488;
+    color: #ffffff;
+    font-weight: 700;
+    border-color: #2dd4bf;
+    box-shadow: 0 0 8px rgba(20, 184, 166, 0.5);
+}
+.gl-btn.active,
+.gl-grade-btn.active {
+    background-color: #d97706;
+    color: #ffffff;
+    font-weight: 700;
+    border-color: #fbbf24;
+    box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+}
+.bg-btn.active {
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 700;
+    border-color: #818cf8;
+    box-shadow: 0 0 8px rgba(99, 102, 241, 0.5);
+}
+.hh-btn.active {
+    background-color: #db2777;
+    color: #ffffff;
+    font-weight: 700;
+    border-color: #f472b6;
+    box-shadow: 0 0 8px rgba(236, 72, 153, 0.5);
+}
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+.tooltip-text {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 50;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -125px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #4b5563;
+    pointer-events: none;
+}
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #374151;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #6b7280;
+    border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+.saved-build-card {
+    position: relative;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    display: flex;
+    flex-direction: column;
+}
